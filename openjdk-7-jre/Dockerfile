@@ -6,7 +6,9 @@
 #
 
 # Pull base image.
-FROM dockerfile/ubuntu
+FROM gzockoll/core
+
+RUN apt-get -y update && apt-get install -qqy software-properties-common
 
 # Install Java.
 RUN \
